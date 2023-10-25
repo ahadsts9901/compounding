@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input readonly type="number" id="input" value="1">
+    <br />
+    <br />
+    <button onclick="compound()">compound value</button>
+    <p><span>Result</span> <span id="result"></span></p>
+    <p> <span>Times</span> <span id="times"></span></p>
+
+    <script>
+
+        var times = 0
+
+        function compound() {
+
+            let input = document.querySelector("#input")
+
+            let output = input.value * 2
+
+            document.querySelector("#input").value = output
+            document.querySelector("#result").innerText = output
+
+            times++
+
+            document.querySelector("#times").innerText = times
+
+        }
+
+    </script>
+
+</body>
+
+</html>
