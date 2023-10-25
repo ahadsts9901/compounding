@@ -18,6 +18,8 @@
     <br />
     <br />
     <button onclick="compound()">compound value</button>
+    <button onclick="deCompound()">deCompound value</button>
+    <button onclick="reset()">reset</button>
     <p><span>Result</span> <span id="result"></span></p>
     <p> <span>Times</span> <span id="times"></span></p>
 
@@ -38,6 +40,30 @@
 
             document.querySelector("#times").innerText = times
 
+        }
+
+        function deCompound() {
+
+            let input = document.querySelector("#input")
+
+            let output = input.value / 2
+
+            document.querySelector("#input").value = output
+            document.querySelector("#result").innerText = output
+
+            times--
+
+            document.querySelector("#times").innerText = times
+
+        }
+
+        function reset() {
+            let input = document.querySelector("#input")
+
+            document.querySelector("#input").value = 1
+            document.querySelector("#result").innerText = ""
+
+            document.querySelector("#times").innerText = ""
         }
 
     </script>
